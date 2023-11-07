@@ -1,0 +1,12 @@
+version: "3"
+services:
+  django:
+    build: "django/"
+    container_name: "django"
+    working_dir: "/root/"
+    tty: true
+    volumes:
+      - ./django/app:/root/app
+    ports:
+      #- "8000:8000"
+      - 80:80
